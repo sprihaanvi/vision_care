@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sprihaanvi/vision_care/static/css/main.973e4e9d.css",
+    "main.js": "/sprihaanvi/vision_care/static/js/main.33f1eaf3.js",
+    "static/js/453.40b0e46f.chunk.js": "/sprihaanvi/vision_care/static/js/453.40b0e46f.chunk.js",
+    "index.html": "/sprihaanvi/vision_care/index.html",
+    "main.973e4e9d.css.map": "/sprihaanvi/vision_care/static/css/main.973e4e9d.css.map",
+    "main.33f1eaf3.js.map": "/sprihaanvi/vision_care/static/js/main.33f1eaf3.js.map",
+    "453.40b0e46f.chunk.js.map": "/sprihaanvi/vision_care/static/js/453.40b0e46f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.973e4e9d.css",
+    "static/js/main.33f1eaf3.js"
+  ]
+}
