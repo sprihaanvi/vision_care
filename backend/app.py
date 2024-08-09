@@ -4,12 +4,12 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import io
 from PIL import Image
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # Load the pre-trained model
 model = load_model('EyePredModel.h5')
- 
+
 # Define the label mapping
 labels = {0: 'cataract', 1: 'diabetic_retinopathy', 2: 'glaucoma', 3: 'normal'}
 
@@ -31,8 +31,10 @@ def predict():
     # Make the prediction
     prediction = model.predict(img_array)
     pred_label = np.argmax(prediction)
+    accuracy = float(np.max(prediction))*100
+    accuracy = round(accuracy, 3)  # Get the confidence of the prediction
 
-    return jsonify({'prediction': labels[pred_label]})
+    return jsonify({'prediction': labels[pred_label], 'accuracy': accuracy})
 
 if __name__ == '__main__':
     app.run(debug=True)
